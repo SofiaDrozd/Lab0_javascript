@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression Results</title>
+</head>
+<body>
+    <h1>JavaScript Expression Results</h1>
+    <script>
+        console.log("JavaScript Results:");
+        console.log("5 > 4 → " + (5 > 4)); // true
+        console.log("\"apple\" > \"pineapple\" → " + ("apple" > "pineapple")); // false
+        console.log("\"2\" > \"12\" → " + ("2" > "12")); // true
+        console.log("undefined == null → " + (undefined == null)); // true
+        console.log("undefined === null → " + (undefined === null)); // false
+        console.log("null == \"\\n0\\n\" → " + (null == "\n0\n")); // false
+        console.log("null === +\"\\n0\\n\" → " + (null === +"\n0\n")); // false
+    </script>
+
+    <h1>Java Results</h1>
+    <pre>
+        public class ExpressionResults {
+            public static void main(String[] args) {
+                System.out.println("Java Results:");
+                System.out.println("5 > 4 → " + (5 > 4)); // true
+                System.out.println("\"apple\" > \"pineapple\" → " + ("apple".compareTo("pineapple") > 0)); // false
+                System.out.println("\"2\" > \"12\" → " + ("2".compareTo("12") > 0)); // true
+                System.out.println("null == null → " + (null == null)); // true
+                System.out.println("null === null → " + (null == null)); // true
+                System.out.println("null == \"\\n0\\n\" → " + (null == "\n0\n")); // false
+                System.out.println("null === Integer.parseInt(\"\\n0\\n\") → " + (null == Integer.parseInt("\n0\n"))); // false
+            }
+        }
+    </pre>
+</body>
+</html>
