@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression Results</title>
+</head>
+<body>
+    <script>
+        const results = {
+            expression1: "" + 1 + 0,         
+            expression2: "" - 1 + 0,       
+            expression3: true + false,     
+            expression4: 6 / "3",          
+            expression5: "2" * "3",               
+            expression6: 4 + 5 + "px",         
+            expression7: "$" + 4 + 5,       
+            expression8: "4" - 2,           
+            expression10: "  -9  " + 5,            
+            expression11: "  -9  " - 5,      
+            expression12: null + 1,         
+            expression13: undefined + 1,     
+            expression14: " \t \n" - 2        
+        };
+
+        // Виведення результатів у консоль
+        console.log("Results of the expressions:");
+        for (const [key, value] of Object.entries(results)) {
+            console.log(`${key}: ${value}`);
+        }
+    </script>
+</body>
+</html>

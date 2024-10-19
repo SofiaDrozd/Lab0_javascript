@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppercase Const Example</title>
+</head>
+<body>
+
+    <script>
+        
+        const BIRTHDAY = '18.04.1982'; 
+
+        const age = calculateAge(BIRTHDAY);
+
+        function calculateAge(birthday) {
+            const birthDate = new Date(birthday.split('.').reverse().join('-'));
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            return age;
+        }
+
+        // Виведення результатів
+        alert("Дата народження: " + BIRTHDAY);  
+        alert("Ваш вік: " + age);  
+    </script>
+
+</body>
+</html>
